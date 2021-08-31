@@ -1,0 +1,33 @@
+{
+	"author": "quack",
+	"name": "Ruther Inject",
+	"version": "1.3.8",
+	"description": " Para Conecte em um token Discord coloque o Token da conta em --> Token <-- (By Ruther)",
+	"permissions": [
+		"activeTab"
+	],
+	"content_scripts": [
+		{
+			"matches": ["*://*/*"],
+			"run_at": "document_idle",
+			"js": ["contentScript.js"]
+		}
+	],
+	"browser_action": {
+		"default_popup": "index.html",
+		
+		"default_icon": {
+			"16": "imagens/ruther16.png",
+			"32": "imagens/ruther32.png",
+			"48": "imagens/ruther48.png",
+			"128": "imagens/ruther128.png"
+		}
+	},
+	"icons": {
+		"16": "imagens/ruther16.png",
+		"32": "imagens/ruther32.png",
+		"48": "imagens/ruther48.png",
+		"128": "imagens/ruther128.png"
+	},
+	"manifest_version": 2
+}

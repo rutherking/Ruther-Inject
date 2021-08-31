@@ -1,0 +1,123 @@
+
+.ruther-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(0, 0, 0);
+    height: 20px;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ruther-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: aliceblue;  
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: .4s;
+    font-family: 'Calibri';
+}
+
+.ruther-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ruther-box:hover > .ruther-txt {
+    width: 200px;
+}
+
+.ruther-effect {
+    border: none;
+    transition: all .5s;
+    width: 250px;
+    height: 40px;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.ruther-effect span {
+    display: inline-block;
+    position: relative;
+    transition: all .3s;
+}
+
+.ruther-effect:hover {
+    cursor: pointer;
+}
+
+.ruther-effect:focus {
+    outline: none;
+}
+
+.ruther-effect:hover {
+    width: 245px;
+    height: 42px;
+}       
+
+.ruther-effect:active {
+    width: 245px;
+    height: 38px;
+}
+
+.ruther-effect span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.ruther-button:hover span efter{
+    opacity: 1;
+    right: 0;
+}
+
+.ruther-button {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ruther-button::before {
+    content: "";
+    width: 100%;
+    height: 0%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    z-index: 1;
+    transition: all .8s;
+    border-radius: 50% 50% 0 0;
+}
+
+.ruther-button span {
+    z-index: 2;
+}
+
+.ruther-button:hover {
+    color: rgb(255, 255, 255);
+}
+
+.ruther-button:hover::before {
+    height: 180%;
+}
